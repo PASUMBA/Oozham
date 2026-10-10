@@ -6,6 +6,18 @@ Built by **PASU Labs** for **TinkerHub LAYOVER 2026** (TinkerSpace Calicut). The
 
 ---
 
+## Hackathon Tracks (TinkerHub LAYOVER 2026)
+
+| Track | Fit | Why |
+|---|---|---|
+| **05 Travel hardware & IoT** | Primary | reCamera + ESP32 + LoRa + LED signs, a real roadside device |
+| **03 Navigation & mobility** | Primary | Decides who moves first through the bend, so traffic keeps flowing on ghat roads |
+| **02 AI-powered travel experiences** | Secondary | YOLO11n edge AI classifies vehicles as HEAVY / LIGHT |
+| **01 Travel utilities & tools** | Secondary | Saves travellers hours stuck at Thamarassery Churam |
+| **07 Accessibility & sustainable travel** | Secondary | Keeps emergency routes open, reduces accidents, cuts fuel wasted idling in jams |
+
+---
+
 ## 1. The Core Problem
 
 Hairpin bends on ghat roads (like Thamarassery Churam) are physically narrow.
