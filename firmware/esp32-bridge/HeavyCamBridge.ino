@@ -1,5 +1,5 @@
 // HeavyCamBridge — ESP32 hosts its own WiFi AP (no home router needed).
-// reCamera joins this WiFi at a fixed IP; ESP32 polls /api/vehicle/code
+// reCamera joins this WiFi at a fixed IP; ESP32 polls /api/heavy
 // and drives a pin -> Xiao nRF52840 D2 (LoRa transmitter INPUT_PIN).
 // API replies "true" when HEAVY (truck/bus) is detected.
 // Logic: "true" = HIGH, anything else/error = LOW (fail-safe).
