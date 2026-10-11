@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="850" viewBox="0 0 1200 850" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrowLora" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#8e44ad"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="850" fill="#f7f4ec"/>
+
+  <!-- title -->
+  <text x="600" y="48" text-anchor="middle" font-size="30" font-weight="bold" fill="#1a3c5e">Oozham — Field Deployment (Elevation View)</text>
+  <text x="600" y="76" text-anchor="middle" font-size="15" fill="#555">Hairpin bend, Thamarassery Churam — one approach instrumented</text>
+
+  <!-- hillside between the two road levels -->
+  <path d="M120,430 L1080,430 L1080,600 L120,600 Z" fill="#9db08a" opacity="0.5"/>
+  <text x="620" y="520" text-anchor="middle" font-size="14" fill="#5a6b47" font-style="italic">hillside</text>
+
+  <!-- continuous road: approach A -> hairpin U-turn -> approach B -->
+  <path d="M120,705 L950,705 C1140,705 1140,345 950,345 L120,345" fill="none" stroke="#3f4448" stroke-width="90" stroke-linecap="butt"/>
+  <path d="M120,705 L950,705 C1140,705 1140,345 950,345 L120,345" fill="none" stroke="#f1c40f" stroke-width="4" stroke-dasharray="24,18"/>
+  <text x="1070" y="530" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold" transform="rotate(-90 1070 525)">HAIRPIN BEND</text>
+  <text x="985" y="780" text-anchor="middle" font-size="12" fill="#555">trucks need full width</text>
+
+  <text x="520" y="290" font-size="15" font-weight="bold" fill="#1a3c5e">APPROACH B (uphill)</text>
+  <text x="135" y="650" font-size="15" font-weight="bold" fill="#1a3c5e">APPROACH A (downhill)</text>
+
+  <!-- truck on approach A, heading right toward bend -->
+  <g>
+    <rect x="540" y="672" width="110" height="36" rx="5" fill="#b03a2e"/>
+    <rect x="650" y="680" width="34" height="28" rx="4" fill="#922b21"/>
+    <circle cx="565" cy="712" r="11" fill="#222"/><circle cx="565" cy="712" r="5" fill="#888"/>
+    <circle cx="620" cy="712" r="11" fill="#222"/><circle cx="620" cy="712" r="5" fill="#888"/>
+    <circle cx="670" cy="712" r="11" fill="#222"/><circle cx="670" cy="712" r="5" fill="#888"/>
+    <text x="612" y="738" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">HEAVY TRUCK</text>
+  </g>
+  <!-- truck direction arrow -->
+  <line x1="700" y1="700" x2="800" y2="700" stroke="#e67e22" stroke-width="4"/>
+  <polygon points="800,694 818,700 800,706" fill="#e67e22"/>
+
+  <!-- car on approach B, heading right toward the bend -->
+  <g>
+    <rect x="240" y="318" width="70" height="26" rx="6" fill="#2471a3"/>
+    <rect x="264" y="310" width="34" height="12" rx="4" fill="#1a5276"/>
+    <circle cx="258" cy="348" r="9" fill="#222"/><circle cx="258" cy="348" r="4" fill="#888"/>
+    <circle cx="293" cy="348" r="9" fill="#222"/><circle cx="293" cy="348" r="4" fill="#888"/>
+    <line x1="320" y1="331" x2="395" y2="331" stroke="#e67e22" stroke-width="4"/>
+    <polygon points="395,325 413,331 395,337" fill="#e67e22"/>
+  </g>
+
+  <!-- detection zone cone -->
+  <polygon points="420,620 330,660 560,660" fill="#f39c12" opacity="0.18"/>
+  <line x1="420" y1="620" x2="330" y2="660" stroke="#f39c12" stroke-width="2" stroke-dasharray="6,5"/>
+  <line x1="420" y1="620" x2="560" y2="660" stroke="#f39c12" stroke-width="2" stroke-dasharray="6,5"/>
+  <text x="395" y="639" text-anchor="middle" font-size="11" fill="#b9770e" font-weight="bold">AI</text>
+  <text x="395" y="652" text-anchor="middle" font-size="11" fill="#b9770e" font-weight="bold">detection</text>
+
+  <!-- reCamera pole on approach A -->
+  <line x1="420" y1="660" x2="420" y2="585" stroke="#555" stroke-width="6"/>
+  <rect x="410" y="556" width="20" height="30" rx="3" fill="#1a3c5e"/>
+  <circle cx="420" cy="571" r="6" fill="#5dade2"/>
+  <text x="420" y="540" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a3c5e">reCamera</text>
+  <text x="420" y="525" text-anchor="middle" font-size="10.5" fill="#555">YOLO11n · truck/bus → HEAVY</text>
+  <!-- camera LEDs -->
+  <circle cx="395" cy="560" r="5" fill="#f9e79f" stroke="#b7950b" stroke-width="1.2"/>
+  <circle cx="402" cy="551" r="5" fill="#f9e79f" stroke="#b7950b" stroke-width="1.2"/>
+  <circle cx="438" cy="551" r="5" fill="#f9e79f" stroke="#b7950b" stroke-width="1.2"/>
+  <circle cx="445" cy="560" r="5" fill="#f9e79f" stroke="#b7950b" stroke-width="1.2"/>
+  <text x="385" y="550" text-anchor="end" font-size="10.5" fill="#b7950b">4 white LEDs ON</text>
+
+  <!-- ESP32 + LoRa TX box next to camera -->
+  <rect x="465" y="600" width="140" height="50" rx="6" fill="#fff" stroke="#8e44ad" stroke-width="2"/>
+  <text x="535" y="620" text-anchor="middle" font-size="12" font-weight="bold" fill="#8e44ad">ESP32 + RYLR998</text>
+  <text x="535" y="637" text-anchor="middle" font-size="10" fill="#555">polls API → LoRa TX "H"</text>
+  <line x1="465" y1="625" x2="435" y2="640" stroke="#8e44ad" stroke-width="2"/>
+
+  <!-- LoRa link: dashed arc across hillside to receiver -->
+  <path d="M605,610 C720,480 760,420 800,300" fill="none" stroke="#8e44ad" stroke-width="3" stroke-dasharray="10,7" marker-end="url(#arrowLora)"/>
+  <text x="660" y="500" font-size="13" font-weight="bold" fill="#8e44ad" transform="rotate(-52 660 500)">LoRa wireless link — no wiring</text>
+
+  <!-- receiver + warning sign on approach B -->
+  <line x1="800" y1="300" x2="800" y2="230" stroke="#555" stroke-width="6"/>
+  <rect x="755" y="198" width="90" height="34" rx="5" fill="#fff" stroke="#8e44ad" stroke-width="2"/>
+  <text x="800" y="220" text-anchor="middle" font-size="11" font-weight="bold" fill="#8e44ad">Nano + RYLR998</text>
+  <line x1="800" y1="198" x2="800" y2="175" stroke="#555" stroke-width="4"/>
+  <rect x="715" y="105" width="170" height="70" rx="8" fill="#222" stroke="#c0392b" stroke-width="3"/>
+  <circle cx="800" cy="132" r="15" fill="#e74c3c"/>
+  <circle cx="800" cy="132" r="21" fill="none" stroke="#e74c3c" stroke-width="2" opacity="0.45"/>
+  <text x="800" y="166" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">HEAVY VEHICLE</text>
+  <text x="800" y="95" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#c0392b">warning sign — approach B</text>
+
+  <!-- legend box -->
+  <rect x="40" y="105" width="450" height="185" rx="10" fill="#ffffff" stroke="#1a3c5e" stroke-width="1.5"/>
+  <text x="58" y="133" font-size="15" font-weight="bold" fill="#1a3c5e">Signal chain (all built &amp; tested)</text>
+  <text x="58" y="158" font-size="12" fill="#333">1. reCamera sees truck/bus → classifies HEAVY</text>
+  <text x="58" y="178" font-size="12" fill="#333">2. Camera's 4 white LEDs turn ON</text>
+  <text x="58" y="198" font-size="12" fill="#333">3. API returns heavy = true → ESP32 pin HIGH</text>
+  <text x="58" y="218" font-size="12" fill="#333">4. LoRa "H" crosses the bend → Nano pin D2</text>
+  <text x="58" y="242" font-size="12" font-weight="bold" fill="#c0392b">Warning LED: blink = clear, solid = heavy coming</text>
+  <line x1="55" y1="255" x2="475" y2="255" stroke="#ddd"/>
+  <text x="58" y="276" font-size="11.5" fill="#666">Fail-safe: any error → signal LOW, never a false warning</text>
+
+  <!-- footer -->
+  <text x="600" y="815" text-anchor="middle" font-size="13" fill="#555" font-style="italic">Oozham — end-to-end on real hardware · PASU Labs · TinkerHub LAYOVER 2026</text>
+</svg>
